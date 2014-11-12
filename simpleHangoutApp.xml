@@ -37,11 +37,7 @@
 -->
 </style>
 <body>
-
-<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
-<script src="//rawgit.com/tjwei/gh_show/master/myhangoutapp.js"><script />
 <h3>My Hangout App</h3>
-
 <p>
 <input class="button" type="button" value="Show participants!" id="showParticipants" 
     style="visibility:hidden;"
@@ -49,12 +45,18 @@
 </p>
 
 <div id="participantsDiv"></div>
-
 <hr>
 <canvas style="width: 100px; height: 100px; background-color: black;" id="keycanvas" tabindex="1">
-
 </canvas>
+
 <p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
+
+
+<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+<script src="//rawgit.com/tjwei/gh_show/master/myhangoutapp.js"><script />
+
+
+
 
 <script>
 // Wait for gadget to load.                                                       

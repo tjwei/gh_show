@@ -40,7 +40,7 @@
 <h3>My Hangout App</h3>
 <p>
 <input id="img_url" />
-<input class="button" type="button" value="Show participants!" id="showParticipants" 
+<input class="button" type="button" value="chang pic!" id="showParticipants" 
     style="visibility:hidden;"
     onClick="showParticipants()"/>
 </p>

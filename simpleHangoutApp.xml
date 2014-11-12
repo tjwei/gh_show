@@ -39,7 +39,7 @@
 <body>
 
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
-<script src="//rawgithub.com/tjwei/gh_show/master/myhangoutapp.js"><script />
+<script src="//rawgit.com/tjwei/gh_show/master/myhangoutapp.js"><script />
 <h3>My Hangout App</h3>
 
 <p>

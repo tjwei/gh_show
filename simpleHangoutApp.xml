@@ -39,6 +39,7 @@
 <body>
 <h3>My Hangout App</h3>
 <p>
+<input id="img_url" />
 <input class="button" type="button" value="Show participants!" id="showParticipants" 
     style="visibility:hidden;"
     onClick="showParticipants()"/>

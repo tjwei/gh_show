@@ -37,23 +37,73 @@
 -->
 </style>
 <body>
-<h3>My Hangout App</h3>
+<div style="height: 100%;overflow-y: scroll;">
+<h3>Google Hangout Show</h3>
 <p>
-<input id="img_url" />
-<input class="button" type="button" value="chang pic!" id="showParticipants" 
-    style="visibility:hidden;"
-    onClick="showParticipants()"/>
+<pre id="info" style"width: 250px; height: 40px;"></pre>
+<input class="button" type="button" value="show circle" id="showPointer"  />
+<input class="button" type="button" value="(not)lock size" id="lockSize"  />
 </p>
 
-<div id="participantsDiv"></div>
 <hr>
-<canvas style="width: 100px; height: 100px; background-color: black;" id="keycanvas" tabindex="1">
-</canvas>
+<div style="width: 250px; height: 100px; background-color: black;color: white;" id="keyControlDiv" tabindex="1">
+Key Control Area
+</div>
+<br />
+<input type="text" id="var" style="width: 250px;"/>
+<br />
+</p>
+<p>
+Base URL: <input id="baseUrl" style="width: 250px;" value="http://b81.org/s/hangout/" />
+Banner:: <input id="banner" style="width: 250px;" value="PyConChina2014-slide-barnner.png" />
+<br />
+Slide Json:
+<textarea id="slideData" style="width: 250px;" rows=10>
+([ 
+           [["cover.png"], ["cover2.png"]],
+           [["s1.png"], [Pic("s1_1.png",0,0,1,false), Pic("xcin.png", -0.2, 0.3), Pic("mrsd.png", 0.2, 0.3)], 
+                        [Pic("s1_2.png",0,0,1,false), Pic("zbochs.png", -0.2, 0.3), Pic("Bagle.png", 0.2, 0.3)], 
+                        [Pic("s1_3.png",0,0,1,false), Pic("textsnes.jpg", -0.2, 0.3), Pic("jspsx.jpg", 0.2, 0.3)],
+                        ["s1_4.png"], 
+                        ["s1_5.png", Pic("hualienpy_logo.jpg", -0.2, 0.3, 0.3), Pic("Logo_red_1200.png", 0.2, 0.3, 0.3)]],
+           
+          [[Pic("s2.png", 0,0,0.5), Pic("s2_1.png",-0.4, 0.35, 0.1), Pic("s2_2.png",-0.2, 0.35, 0.1), 
+             Pic("baba.jpg", 0., 0.35, 0.1), Pic("7star.jpg", 0.2, 0.35, 0.1), Pic("ndhu.jpg", 0.4, 0.35, 0.1)]],
+	   [[Pic("s3.png", 0,0,0.5), Pic("s3_1.png",-0.4, 0.35, 0.1), Pic("s3_2.png",-0.2, 0.35, 0.05)], 
+	       [Pic("s3_3.png",0,0,1,false), Pic('hwr.png', 0, 0.1, 0.6)], 
+	       ["s3_4.png", Pic("pycontw2012.jpg", 0, 0.1, 0.4)], ["s3_5.png"], 
+	       [Pic("s3_6.png",0, -0.2,1,false), Pic('pygirl.jpg', -0.2, 0.1, 0.5), Pic('pygirl-editor.png', 0.3, 0.1, 0.5)],
+	       [Pic("s3_7.png",0, -0.2,1,false),Pic("keynote.jpg", 0, 0.15, 0.5)]],
+           [["s4.png"], [Pic("taiwan.png",0,0,0.8,false), Pic("pyhug.png", -0.4, 0.4, 0.1), Pic("taipeipy.png", -0.3, 0.4, 0.1), 
+                                   Pic("tainanpy.png", -0.2, 0.4, 0.1), Pic("hualienpy.png", -0.1, 0.4, 0.1), 
+                                   Pic("tcpy.png", 0, 0.4, 0.1), Pic("pyladies.png", 0.1, 0.4, 0.1),
+               			   Pic("kspy.png", 0.2, 0.4, 0.1), Pic("typy.png", 0.3, 0.4, 0.1)], 
+           [Pic("s4_2.png",0,0,1,false), Pic("hpy1.jpg", -0.4, 0.4, 0.1), Pic("hpy2.jpg", -0.3, 0.4, 0.1), 
+                                   Pic("py31.png", -0.2, 0.4, 0.1), Pic("hpy3.jpg", -0.1, 0.4, 0.1), 
+                                   Pic("hpy4.jpg", 0, 0.4, 0.1), Pic("hpy5.jpg", 0.1, 0.4, 0.1), 
+                                   Pic("hpy6.jpg", 0.2, 0.4, 0.1), Pic("hpy7.jpg", 0.3, 0.4, 0.1)], 
+           ["s4_11.png"]],
+            [[Pic("sThe.png",0,-0.2,1,false), Pic('pyconapac2015.png', -0.3,0.2, 0.35), Pic('PyConChina2014-stick-logo.png', 0.2,0.2, 0.35)]]
+             ])
+</textarea>
+<br />
+<input class="button" type="button" value="Load Slides" id="loadSlides"    />
+</p>
+<p>
+Camera Data:
+<textarea id="cameraParameter" style="width: 250px;" rows=5>
 
-<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
+({r:[-0.99706972786436265, -0.024166882783646332, -0.07258043505661213, -0.011687943458058115, -0.88952154122597937, 0.45674371333678959, -0.075599932236787293, 0.45625364598157431, 0.88663253988014323], t:[-14.943737031311143, 288.5149920622481, 185.93049167420216], k1:1.01614822194, k2:-3.48160690047, k3:2.96606022545, p1:-0.024315262504, p2:-0.0110366618026, fx:918.17382298, fy:904.799523377, cx:715.34998813, cy:287.488152309})
+</textarea>
+<br />
+<input class="button" type="button" value="set camera" id="cameraButton"    />
+</p>
+</div>
+
 
 
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+<script src="https://rawgit.com/leapmotion/leapjs/master/leap-0.6.4.min.js"> </script>
 <script src="//rawgit.com/tjwei/gh_show/master/myhangoutapp.js"></script>
 
 

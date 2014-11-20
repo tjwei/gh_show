@@ -171,6 +171,7 @@ function ghSlides() {
         slideY = [];
         for (var i = 0; i < slideData.length; i++)
             slideY.push(0);
+       showSlides();
     }
     var updateScale = function() {
         if (scale <= targetScale + 0.02 && scale >= targetScale - 0.02) {
@@ -373,8 +374,7 @@ function ghSlides() {
 
         });
     });
-    loadSlides();
-    showSlides();
+    loadSlides();    
     document.getElementById('loadSlides').onclick = loadSlides;
     document.getElementById('keyControlDiv').onkeydown = keyControl;
     document.getElementById('showPointer').onclick = showPointer;

@@ -7,6 +7,7 @@ gh_show
 Follow https://developers.google.com/+/hangouts/getting-started 
 but set the URL of the  XML file as:
 https://raw.githubusercontent.com/tjwei/gh_show/master/HangoutShow.xml
+and choose the project to be an Extension instead of an APP.
 
 
 ## Try

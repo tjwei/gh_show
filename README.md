@@ -1,6 +1,6 @@
 gh_show
 =======
-## Do a remote presentation via Google Hangouts
+## Remote presentation with Google Hangouts
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ZEZQjnoG2hw/0.jpg)](http://www.youtube.com/watch?v=ZEZQjnoG2hw)
 
 ## Install

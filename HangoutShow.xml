@@ -54,7 +54,7 @@ Key Control Area
 <br />
 </p>
 <p>
-Base URL: <input id="baseUrl" style="width: 250px;" value="http://b81.org/s/hangout/" />
+Base URL: <input id="baseUrl" style="width: 250px;" value="https://raw.githubusercontent.com/tjwei/gh_show/master/demo_imgs" />
 Banner:: <input id="banner" style="width: 250px;" value="PyConChina2014-slide-barnner.png" />
 <br />
 Slide Json:

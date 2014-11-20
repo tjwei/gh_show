@@ -226,7 +226,7 @@ function ghSlides() {
         /*    //  Special ending for PyCon2014CN
                 if (evt.keyIdentifier == "U+0046") {           
                     var data = Pic("sThe2.png", 0, -0.2, 1, false);
-                    var url = "http://b81.org/s/hangout/" + data.url;
+                    var url = "https://raw.githubusercontent.com/tjwei/gh_show/master/demo_imgs" + data.url;
                     if ("opt" in data) opt = data.opt;
                     if ("leap" in data) leap = data.leap;
                     var img = gapi.hangout.av.effects.createImageResource(url);
@@ -264,7 +264,7 @@ function ghSlides() {
     }
     var leapOutput = document.getElementById('var');
     var skip = 0;
-    var redCircleImage = gapi.hangout.av.effects.createImageResource('http://b81.org/s/hangout/red_circle.png');
+    var redCircleImage = gapi.hangout.av.effects.createImageResource('https://raw.githubusercontent.com/tjwei/gh_show/master/demo_imgs/red_circle.png');
     var redCircle;
     cameraData = null;
     document.getElementById('cameraButton').onclick = function() {

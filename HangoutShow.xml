@@ -40,7 +40,7 @@
 <div style="height: 100%;overflow-y: scroll;">
 <h3>Google Hangout Show</h3>
 <p>
-<pre id="info" style"width: 250px; height: 40px;"></pre>
+<pre id="info" style="width: 250px; height: 40px;"></pre>
 <input class="button" type="button" value="show circle" id="showPointer"  />
 <input class="button" type="button" value="(not)lock size" id="lockSize"  />
 </p>

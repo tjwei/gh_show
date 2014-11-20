@@ -375,7 +375,7 @@ function ghSlides() {
     });
     loadSlides();
     showSlides();
-    document.getElementById('loadSlides').onkeydown = loadSlides;
+    document.getElementById('loadSlides').onclick = loadSlides;
     document.getElementById('keyControlDiv').onkeydown = keyControl;
     document.getElementById('showPointer').onclick = showPointer;
     document.getElementById('lockSize').onclick = setResize;

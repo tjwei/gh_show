@@ -1,8 +1,7 @@
 gh_show
 =======
 ## Do a remote presentation via Google Hangouts
-https://www.youtube.com/watch?v=ZEZQjnoG2hw&list=UULA68RSY6peX50b-Dw8mEpQ
-
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ZEZQjnoG2hw/0.jpg)](http://www.youtube.com/watch?v=ZEZQjnoG2hw)
 
 ## Install
 Follow https://developers.google.com/+/hangouts/getting-started 

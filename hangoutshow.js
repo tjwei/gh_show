@@ -132,6 +132,7 @@ function ghSlides() {
             transitionY += incY;
             transitionX += incX;
             var mv = function(ov, i, array) {
+               if( ov.isDisposed()) return;
                 var pos = ov.getPosition();
                 ov.setPosition(pos.x + incX, pos.y + incY);
             };

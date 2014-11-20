@@ -19,7 +19,10 @@ When the focus is on the black div, then you can use your arrow keys to control 
 ## Create your own slides
 The slides is in JSON format, you need to convert your slides into jpg or png files.
 slides2png.ipynb demostrate how to use python and spynner to convert reveal.js slides into png files.
-paste the base url, banner file name, and the slide JSON into slide data textarea, and then press "load slides" button.
+(the original slides can be found  at http://b81.org/s/pyconcn_zhs.html
+or  https://drive.google.com/open?id=0B67hU53wKsamLTNqdG96VjRlaXc&authuser=0 in PDF format)
+
+Paste the base url, banner file name, and the slide JSON into slide data textarea, and then press "load slides" button.
 
 ## Leap motion
 You need to calibrate the camera first.

@@ -165,7 +165,8 @@ function ghSlides() {
                 reference: gapi.hangout.av.effects.ScaleReference.HEIGHT
             }
         });
-        for (var img in images) img.dispose();
+        for (var i in images)
+                    images[i].dispose();
         slideData = eval(document.getElementById('slideData').value);
         slideX = 0;
         slideY = [];

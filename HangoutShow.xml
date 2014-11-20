@@ -104,7 +104,7 @@ Camera Data:
 
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 <script src="https://rawgit.com/leapmotion/leapjs/master/leap-0.6.4.min.js"> </script>
-<script src="//rawgit.com/tjwei/gh_show/master/myhangoutapp.js"></script>
+<script src="//rawgit.com/tjwei/gh_show/master/hangoutshow.js"></script>
 
 
 
